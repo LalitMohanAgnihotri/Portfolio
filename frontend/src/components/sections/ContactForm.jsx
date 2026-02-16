@@ -23,23 +23,32 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
-    
-    const endpoint = "https://portfolio-ve6v.onrender.com/api/send-email";
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/send-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
+
+      const data = await response.json();
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" }); // Clear form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
       } else {
         setStatus("error");
+        console.error(data.error);
       }
     } catch (error) {
       console.error("Submission error:", error);
@@ -113,12 +122,12 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           className="btn send-btn form-btn"
           disabled={loading} // Disable button while loading
         >
-          {loading ? 'Sending...' : 'Send Message'} <IoMdSend />
+          {loading ? "Sending..." : "Send Message"} <IoMdSend />
         </button>
       </form>
     </>
