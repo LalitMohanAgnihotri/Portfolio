@@ -5,7 +5,7 @@ import Counter from "../assets/projectImg/counter.png";
 import Calculator from "../assets/projectImg/Calculator.png";
 import DSA from "../assets/projectImg/DSA.png";
 import PostVive from "../assets/projectImg/PostVive.png";
-import Weather from "../assets/projectImg/WeatherApp.png";
+import WeatherApp from "../assets/projectImg/WeatherApp.png";
 import UrlShortener from "../assets/projectImg/urlShortner.png";
 import CurrencyConverter from "../assets/projectImg/CurrencyConverter.png";
 
@@ -47,7 +47,7 @@ const projectsList = [
     title: "Weather Application",
     description:
       "Real-time weather application with city search, unit toggle, and detailed forecasts built using Node.js, Express, and OpenWeather API.",
-    imageSrc: Weather,
+    imageSrc: WeatherApp,
     skills: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express", "REST API"],
     extraSkillsCount: 2,
     githubLink: "https://github.com/LalitMohanAgnihotri/Weather-App",
