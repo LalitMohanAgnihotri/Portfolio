@@ -11,7 +11,7 @@ const PORT = 3001; // The backend will run on port 3001
 // 1. Middleware Setup
 app.use(cors({
     // Allow requests only from your React app's development URL
-    origin: 'http://localhost:5173' // This is the common default Vite port
+    origin: 'https://lalitmohanagnihotri.vercel.app' // This is the common default Vite port
 }));
 app.use(express.json());
 

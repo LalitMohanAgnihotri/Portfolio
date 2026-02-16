@@ -24,7 +24,7 @@ const ContactForm = () => {
     setLoading(true);
     setStatus(null);
     
-    const endpoint = "http://localhost:3001/api/send-email";
+    const endpoint = "https://portfolio-ve6v.onrender.com/api/send-email";
 
     try {
       const response = await fetch(endpoint, {
