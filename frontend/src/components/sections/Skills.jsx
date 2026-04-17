@@ -1,22 +1,21 @@
 import SkillCard from "./Skills.Card";
+
 const Skills = () => {
   return (
-    <div id="skills">
-      <center>
+    <section id="skills" className="container">
+      <div className="text-center">
         <h5 className="about-me">MY SKILLS</h5>
-      </center>
-      <center>
         <h1 className="who-i">Technical Expertise</h1>
-      </center>
-      <center>
-        <p className="who-i-am">
+
+        <p className="who-i-am mx-auto">
           I have experience working with a variety of technologies across the
           full stack development spectrum. Here are the key technologies and
           tools I'm proficient with:
         </p>
-      </center>
-      <SkillCard></SkillCard>
-    </div>
+      </div>
+
+      <SkillCard />
+    </section>
   );
 };
 

@@ -7,29 +7,34 @@ import { TiEye } from "react-icons/ti";
 const CertificateCard = ({ certificate, openModal }) => {
   return (
     <div className="col">
-      <div className="card h-100 overflow-hidden rounded-4 shadow-lg certifications-card">
-        <div className="d-flex flex-column h-100 p-4 card-body-content">
-          <span className="certifications-certifi">
+      <div className="card h-100 certifications-card">
+        <div className="card-body-content">
+
+          <h3 className="certifications-certifi">
             <PiCertificate className="certifications-certifi-icon" />
             {certificate.title}
-          </span>
-          <span className="certification-verifiecation">
+          </h3>
+
+          <p className="certification-verifiecation">
             <MdVerified className="certification-verifiecation-icon" />
             {certificate.organization}
-          </span>
-          <span className="certification-cal">
+          </p>
+
+          <p className="certification-cal">
             <FaRegCalendar className="certification-cal-icon" />
             {certificate.issuedDate}
-          </span>
-          <center className="certification-view">
+          </p>
+
+          <div className="certification-view">
             <button
               className="certification-view-btn"
-              onClick={() => openModal(certificate)} // Open modal with specific certificate data
+              onClick={() => openModal(certificate)}
             >
               <TiEye className="certification-view-icon" />
               View Certificate
             </button>
-          </center>
+          </div>
+
         </div>
       </div>
     </div>

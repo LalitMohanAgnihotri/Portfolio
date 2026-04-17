@@ -1,4 +1,5 @@
 import { RiGraduationCapFill } from "react-icons/ri";
+
 const ResumeEducation = () => {
   return (
     <>
@@ -6,7 +7,9 @@ const ResumeEducation = () => {
         <RiGraduationCapFill className="education-icon" />
         Education
       </h2>
-      <div className="container py-5 text-white">
+
+      <div className="education-wrapper">
+
         <div className="education-item">
           <div className="education-dot"></div>
           <div className="education-content">
@@ -17,14 +20,18 @@ const ResumeEducation = () => {
             </p>
           </div>
         </div>
+
         <div className="education-item">
           <div className="education-dot"></div>
           <div className="education-content">
             <span className="education-date">2021 - 2022</span>
             <h3 className="education-title">Intermediate</h3>
-            <p className="education-subtitle">Cambridge Convent SCH School</p>
+            <p className="education-subtitle">
+              Cambridge Convent SCH School
+            </p>
           </div>
         </div>
+
         <div className="education-item">
           <div className="education-dot"></div>
           <div className="education-content">
@@ -32,11 +39,15 @@ const ResumeEducation = () => {
             <h3 className="education-title">
               Bachelor of Technology in Computer Science
             </h3>
-            <p className="education-subtitle">GLA University, Mathura, UP</p>
+            <p className="education-subtitle">
+              GLA University, Mathura, UP
+            </p>
           </div>
         </div>
+
       </div>
     </>
   );
 };
+
 export default ResumeEducation;

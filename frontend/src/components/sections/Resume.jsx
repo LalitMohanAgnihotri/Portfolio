@@ -5,31 +5,37 @@ import { IoMdStar } from "react-icons/io";
 
 const Resume = () => {
   return (
-    <div id="resume">
-      <center>
-        <h1 className="who-i">Education & Certifications</h1>
-      </center>
-      <center>
-        <p className="who-i-am">
-          Here's a summary of my educational background and professional
-          certifications. Download my complete resume for more detailed
-          information.
-        </p>
-      </center>
-      <div className="container col-xxl-10 ">
-        <div className="row align-items-start g-5 py-5">
-          <div className="col-lg-7 ">
-            <ResumeEducation></ResumeEducation>
-            <h1 className="certifications-heding">
+    <section id="resume" className="resume-section">
+      <div className="container col-xxl-10">
+
+        <div className="text-center resume-heading">
+          <h1 className="who-i">Education & Certifications</h1>
+          <p className="who-i-am resume-subtitle">
+            Here's a summary of my educational background and professional
+            certifications. Download my complete resume for more detailed
+            information.
+          </p>
+        </div>
+
+        <div className="row align-items-start g-4 py-4">
+          <div className="col-12 col-lg-7">
+            <ResumeEducation />
+
+            <h2 className="certifications-heding">
               <IoMdStar className="certifications-icon" />
               Certifications
-            </h1> 
-            <ResumeCertificate></ResumeCertificate> 
+            </h2>
+
+            <ResumeCertificate />
           </div>
-            <ResumeDownlod></ResumeDownlod>
+
+          <div className="col-12 col-lg-5">
+            <ResumeDownlod />
+          </div>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

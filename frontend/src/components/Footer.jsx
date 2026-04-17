@@ -1,49 +1,76 @@
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <div className="container-footer">
-      <footer className="d-flex flex-wrap justify-content-between align-items-end py-3 my-4">
-        <div className="col-md-6 d-flex flex-column"> 
-          <h4 className="footer-name">Lalit Mohan Agnihotri</h4> 
-          <p className="copywright-text">
-            Full Stack Web Developer building modern, responsive, and user-friendly applications.
+      <footer className="footer-wrapper">
+        {/* Left Side */}
+        <div className="footer-left">
+          <h4 className="footer-name">Lalit Mohan Agnihotri</h4>
+
+          <p className="copywright-text footer-desc">
+            Full Stack Web Developer building modern, responsive, and
+            user-friendly applications.
           </p>
         </div>
 
-        <div className="col-md-6 d-flex flex-column align-items-end justify-content-between ">
-          <ul className="nav list-unstyled d-flex mb-2  "> 
-            <li className="ms-3 ">
-              <a className="icon-footer" href="https://github.com/LalitMohanAgnihotri" aria-label="GitHub">
-                <FaGithub></FaGithub>
+        {/* Right Side */}
+        <div className="footer-right">
+          <ul className="footer-social-list">
+            <li>
+              <a
+                className="icon-footer"
+                href="https://github.com/LalitMohanAgnihotri"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
               </a>
             </li>
-            <li className="ms-3">
-              <a className="icon-footer" href="https://www.linkedin.com/in/lalit-mohan-agnihotri-5a3632338/" aria-label="LinkedIn">
-                <FaLinkedin></FaLinkedin>
+
+            <li>
+              <a
+                className="icon-footer"
+                href="https://www.linkedin.com/in/lalit-mohan-agnihotri-5a3632338/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
               </a>
             </li>
-            <li className="ms-3">
-              <a className="icon-footer" href="#" aria-label="Twitter">
-                <FaXTwitter></FaXTwitter>
+
+            <li>
+              <a
+                className="icon-footer"
+                href="#"
+                aria-label="Twitter / X"
+              >
+                <FaXTwitter />
               </a>
             </li>
-            <li className="ms-3">
-              <a className="icon-footer" href="https://www.instagram.com/agnihotri8805" aria-label="Instagram">
-                <FaInstagram></FaInstagram>
+
+            <li>
+              <a
+                className="icon-footer"
+                href="https://www.instagram.com/agnihotri8805"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
               </a>
             </li>
           </ul>
-          <span className="mb-0 copywright-text">
+
+          <span className="copywright-text footer-copy">
             © 2025 Lalit Mohan Agnihotri. All rights reserved.
-          </span> 
+          </span>
         </div>
-        
       </footer>
     </div>
   );
 };
+
 export default Footer;

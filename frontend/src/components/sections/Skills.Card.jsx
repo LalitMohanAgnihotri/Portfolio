@@ -1,20 +1,23 @@
 import { AiFillDatabase } from "react-icons/ai";
 import { TbTool } from "react-icons/tb";
 import { BsCreditCard2FrontFill } from "react-icons/bs";
-import { IoChevronBackOutline } from "react-icons/io5";
-import { IoChevronForwardOutline } from "react-icons/io5";
+import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 
 const SkillCard = () => {
   return (
     <>
-      <div className="row row-cols-1 row-cols-md-4 **row-cols-lg-4** g-4 py-5 what-i-do-box">
+      {/* 1 Mobile | 2 Tablet | 4 Large */}
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-5 what-i-do-box">
         <div className="col">
-          <div className="card h-100 overflow-hidden  rounded-4 shadow-lg **service-card-bg** what-i-do-card">
+          <div className="card h-100 overflow-hidden rounded-4 shadow-lg what-i-do-card">
             <div className="d-flex flex-column h-100 p-4">
-              <div className="**service-icon-wrapper** mb-3"></div>
-              <BsCreditCard2FrontFill className="skill-icon-f" />
+              <div className="service-icon-wrapper mb-3">
+                <BsCreditCard2FrontFill className="skill-icon-f" />
+              </div>
+
               <h3 className="what-do">Frontend</h3>
-              <hr className="skill-hr"/>
+              <hr className="skill-hr" />
+
               <div className="skills">
                 <span className="skill-in-card-f">React.js</span>
                 <span className="skill-in-card-f">JavaScript</span>
@@ -29,15 +32,16 @@ const SkillCard = () => {
         </div>
 
         <div className="col">
-          <div className="card h-100 overflow-hidden rounded-4 shadow-lg **service-card-bg** what-i-do-card">
+          <div className="card h-100 overflow-hidden rounded-4 shadow-lg what-i-do-card">
             <div className="d-flex flex-column h-100 p-4">
-              <div className="**service-icon-wrapper** mb-3">
+              <div className="service-icon-wrapper mb-3 d-flex gap-1">
                 <IoChevronBackOutline className="skill-icon-b" />
                 <IoChevronForwardOutline className="skill-icon-b" />
               </div>
 
               <h3 className="what-do">Backend</h3>
-              <hr className="skill-hr"/>
+              <hr className="skill-hr" />
+
               <div className="skills">
                 <span className="skill-in-card-b">Node.js</span>
                 <span className="skill-in-card-b">Express.js</span>
@@ -51,13 +55,15 @@ const SkillCard = () => {
         </div>
 
         <div className="col">
-          <div className="card h-100 overflow-hidden rounded-4 shadow-lg **service-card-bg** what-i-do-card">
+          <div className="card h-100 overflow-hidden rounded-4 shadow-lg what-i-do-card">
             <div className="d-flex flex-column h-100 p-4">
-              <div className="**service-icon-wrapper** mb-3">
+              <div className="service-icon-wrapper mb-3">
                 <AiFillDatabase className="skill-icon-d" />
               </div>
+
               <h3 className="what-do">Database</h3>
-              <hr className="skill-hr"/>
+              <hr className="skill-hr" />
+
               <div className="skills">
                 <span className="skill-in-card-d">MongoDB</span>
                 <span className="skill-in-card-d">MySQL</span>
@@ -68,14 +74,15 @@ const SkillCard = () => {
         </div>
 
         <div className="col">
-          <div className="card h-100 overflow-hidden rounded-4 shadow-lg **service-card-bg** what-i-do-card">
+          <div className="card h-100 overflow-hidden rounded-4 shadow-lg what-i-do-card">
             <div className="d-flex flex-column h-100 p-4">
-              <div className="**service-icon-wrapper** mb-3">
+              <div className="service-icon-wrapper mb-3">
                 <TbTool className="skill-icon-t" />
               </div>
 
-              <h3 className="what-do">Other Tolls</h3>
-              <hr className="skill-hr"/>
+              <h3 className="what-do">Other Tools</h3>
+              <hr className="skill-hr" />
+
               <div className="skills">
                 <span className="skill-in-card-t">Docker</span>
                 <span className="skill-in-card-t">GitHub</span>
@@ -90,4 +97,5 @@ const SkillCard = () => {
     </>
   );
 };
+
 export default SkillCard;

@@ -1,53 +1,43 @@
-import { FaLocationDot } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { MdWifiCalling3 } from "react-icons/md";
+import { FaLocationDot, FaEnvelope, FaPhone, FaGithub, FaLinkedin ,FaInstagram } from "react-icons/fa6";
 
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 const ContactInfo = () => {
   return (
-    <>
-      <h1 className="who-i">Contact Information</h1>{" "}
+    <div className="contact-info-box">
+
       <div className="loction-box">
         <FaLocationDot className="location-icon" />
         <div className="location-text">
-          <h4 className="location-title">Location</h4>
-          <p className="location-desc">Lakhimpur Kheri,UP India</p>
+          <p className="location-title">Location</p>
+          <p className="location-desc">India</p>
         </div>
       </div>
+
       <div className="loction-box">
-        <MdEmail className="location-icon" />
+        <FaEnvelope className="location-icon" />
         <div className="location-text">
-          <h4 className="location-title">Email</h4>
+          <p className="location-title">Email</p>
           <p className="location-desc">lalitagnihotri62@gmail.com</p>
         </div>
       </div>
+
       <div className="loction-box">
-        <MdWifiCalling3 className="location-icon" />
+        <FaPhone className="location-icon" />
         <div className="location-text">
-          <h4 className="location-title">Phone</h4>
-          <p className="location-desc">+91 8957454339</p>
+          <p className="location-title">Phone</p>
+          <p className="location-desc">+91 89574 54339</p>
         </div>
       </div>
-      <div className="followme-box">
-        <h4 className="followme-heding">Follow Me</h4>
-        <a href="https://github.com/LalitMohanAgnihotri">
-          <FaGithub className="social-icon-f" />
-        </a>
-        <a href="https://www.linkedin.com/in/lalit-mohan-agnihotri-5a3632338/">
-          <FaLinkedin className="social-icon-f" />
-        </a>
-        <a href="https://www.instagram.com/agnihotri8805/">
-          <FaInstagram className="social-icon-f" />
-        </a>
+
+      <h3 className="followme-heding">Follow Me</h3>
+
+      <div className="social-links-box">
+        <a href="https://github.com/LalitMohanAgnihotri"><FaGithub className="social-icon-f" /></a>
+        <a href="https://www.linkedin.com/in/lalit-mohan-agnihotri-5a3632338/"><FaLinkedin className="social-icon-f" /></a>
+        <a href="https://www.instagram.com/agnihotri8805"><FaInstagram className="social-icon-f" /></a>
       </div>
-      <p className="mantain-hoght-cont">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-      <p className="mantain-hoght-cont">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-      <p className="mantain-hoght-cont">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-      <p className="mantain-hoght-cont">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-      
-    </>
+
+    </div>
   );
 };
+
 export default ContactInfo;
