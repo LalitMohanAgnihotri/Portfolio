@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoMdSend } from "react-icons/io";
 import { API_URL } from "../../config/config";
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,16 @@ const ContactForm = () => {
 
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
+  
+   useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus(null);
+      }, 3000);
 
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -29,7 +39,6 @@ const ContactForm = () => {
 
     try {
       const API = API_URL;
-        console.log("API URL:", API);
         const response = await fetch(`${API}/api/send-email`, {
         method: "POST",
         headers: {
