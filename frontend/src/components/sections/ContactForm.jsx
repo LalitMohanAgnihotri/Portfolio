@@ -27,16 +27,16 @@ const ContactForm = () => {
     setStatus(null);
 
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/send-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const API =
+        import.meta.env.VITE_API_URL || "https://portfolio-ve6v.onrender.com";
+        console.log("API URL:", import.meta.env.VITE_API_URL);
+        const response = await fetch(`${API}/api/send-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         setStatus("success");
