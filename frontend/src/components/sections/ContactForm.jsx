@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMdSend } from "react-icons/io";
+import { API_URL } from "../../config/config";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -27,9 +28,8 @@ const ContactForm = () => {
     setStatus(null);
 
     try {
-      const API =
-        import.meta.env.VITE_API_URL || "https://portfolio-ve6v.onrender.com";
-        console.log("API URL:", import.meta.env.VITE_API_URL);
+      const API = API_URL;
+        console.log("API URL:", API);
         const response = await fetch(`${API}/api/send-email`, {
         method: "POST",
         headers: {
