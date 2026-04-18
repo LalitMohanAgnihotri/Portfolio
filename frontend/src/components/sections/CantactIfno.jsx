@@ -8,7 +8,7 @@ const ContactInfo = () => {
         <FaLocationDot className="location-icon" />
         <div className="location-text">
           <p className="location-title">Location</p>
-          <p className="location-desc">India</p>
+          <p className="location-desc">Lakhimpur Kheri, Uttar Pradesh, India</p>
         </div>
       </div>
 
