@@ -17,14 +17,38 @@ body {
 }
 
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
+
 .header-container {
   background-color: #0d2439;
   width: 100%;
-  position: sticky;
+  position: fixed !important;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1050;
   padding: 0.75rem 0;
+  transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+  will-change: transform;
+}
+
+/* Navbar visible */
+.header-container.show-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Navbar hidden */
+.header-container.hide-nav {
+  transform: translateY(-120%);
+  opacity: 0.98;
+}
+
+/* Prevent content under fixed navbar */
+body {
+  padding-top: 76px;
 }
 
 .name {
@@ -105,13 +129,17 @@ body {
   }
 
   .nav-links {
-    display: none; /* sidebar handles mobile nav */
+    display: none;
   }
 
   .menu-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  body {
+    padding-top: 72px;
   }
 }
 
@@ -125,7 +153,9 @@ body {
     font-size: 1rem;
     padding: 0.3rem 0.55rem;
   }
+
 }
+
 /* sidebar */
 
 /* Backdrop */

@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import useNavbarScroll from "../hooks/useNavbarScroll";
 
 const Header = ({ toggleSidebar }) => {
+  const showNavbar = useNavbarScroll();
   return (
-    <nav className="navbar navbar-expand-md header-container">
+    <nav
+      className={`navbar navbar-expand-md header-container ${
+        showNavbar ? "show-nav" : "hide-nav"
+      }`}
+    >
       <div className="container-fluid px-3 px-md-4">
         <Link
           to="/"
@@ -27,31 +33,26 @@ const Header = ({ toggleSidebar }) => {
                 Home
               </a>
             </li>
-
             <li className="nav-item">
               <a href="#about-sec" className="nav-link">
                 About
               </a>
             </li>
-
             <li className="nav-item">
               <a href="#skills" className="nav-link">
                 Skills
               </a>
             </li>
-
             <li className="nav-item">
               <a href="#projects" className="nav-link">
                 Projects
               </a>
             </li>
-
             <li className="nav-item">
               <a href="#resume" className="nav-link">
                 Resume
               </a>
             </li>
-
             <li className="nav-item">
               <a href="#contact" className="nav-link">
                 Contact
