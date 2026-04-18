@@ -136,6 +136,15 @@ body {
   z-index: 1049;
 }
 
+/* Backdrop */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 1040;
+}
+
 /* Sidebar Panel */
 .sidebar {
   position: fixed;
@@ -143,7 +152,7 @@ body {
   right: 0;
   height: 100vh;
   width: 280px;
-  max-width: 85vw;
+  max-width: 82vw;
   background: #0d2439;
   padding: 1.2rem 1rem;
   z-index: 1050;
@@ -152,18 +161,25 @@ body {
   overflow-y: auto;
 }
 
+/* Close button right corner */
+.sidebar-close {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
 /* Header */
 .sidebar-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 2rem;
 }
 
 .sidebar-title {
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 /* Links */
@@ -179,8 +195,8 @@ body {
 
 .sidebar-links .nav-link {
   display: block;
-  color: #ffffff !important;
-  padding: 0.8rem 0.9rem !important;
+  color: #fff !important;
+  padding: 0.85rem 0.9rem !important;
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
@@ -207,25 +223,33 @@ body {
 /* Tablet */
 @media (max-width: 768px) {
   .sidebar {
-    width: 260px;
-    padding: 1rem;
+    width: 250px;
+    max-width: 78vw;
   }
 }
 
-/* Small phones */
+/* Mobile */
 @media (max-width: 480px) {
   .sidebar {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
+    width: 240px;       /* not full screen */
+    max-width: 75vw;    /* keep visible page area */
+    padding: 1rem 0.9rem;
+  }
+
+  .sidebar-title {
+    font-size: 1.05rem;
   }
 
   .sidebar-links .nav-link {
-    padding: 0.9rem 0.8rem !important;
     font-size: 0.95rem;
+    padding: 0.8rem !important;
+  }
+
+  .sidebar-close {
+    top: 14px;
+    right: 14px;
   }
 }
-
 /* home */
 
 /* =========================

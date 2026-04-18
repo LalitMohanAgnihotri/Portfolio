@@ -5,14 +5,15 @@ const Sidebar = ({ toggleSidebar }) => {
       <div className="sidebar-backdrop" onClick={toggleSidebar}></div>
 
       <aside className="sidebar">
+        {/* Close Button */}
+        <button
+          className="btn-close btn-close-white sidebar-close"
+          onClick={toggleSidebar}
+          aria-label="Close sidebar"
+        ></button>
+
         <div className="sidebar-top">
           <h5 className="sidebar-title">Menu</h5>
-
-          <button
-            className="btn-close btn-close-white"
-            onClick={toggleSidebar}
-            aria-label="Close sidebar"
-          ></button>
         </div>
 
         <ul className="sidebar-links">
