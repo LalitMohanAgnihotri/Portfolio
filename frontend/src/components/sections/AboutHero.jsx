@@ -34,7 +34,7 @@ const AboutJourney = () => {
           <div className="about-img-frame">
             <div className="about-img-box">
               <img
-                src="/your-image.png"
+                src="/Lalit.png"
                 alt="About"
                 className="about-img"
               />

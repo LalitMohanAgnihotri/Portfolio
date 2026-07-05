@@ -1,6 +1,7 @@
 import ActionButtons from "./ActionButtons";
 import SocialLinks from "./SocialLinks";
 
+
 const Hero = () => {
   return (
     <section className="container Hero-sec" id="home">
@@ -33,7 +34,7 @@ const Hero = () => {
         <div className="col-12 col-lg-6 d-flex justify-content-center">
           <div className="profile-picture-container">
             <img
-              src="#"
+              src="/Lalit.png"
               alt="Lalit Mohan Agnihotri"
               className="about-img"
             />

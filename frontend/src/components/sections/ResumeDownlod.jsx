@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdFileDownload } from "react-icons/md";
 import { TiEye } from "react-icons/ti";
-import imagePath from "../../assets/resume/image.png";
+import imagePath from "../../assets/resume/Lalit_Mohan_Agnihotri_Resume.png";
 
 const ResumeDownlod = () => {
   const [isImageEnlarged, setIsImageEnlarged] = useState(false);
