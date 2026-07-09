@@ -7,7 +7,7 @@ const ResumeDownlod = () => {
   const [isImageEnlarged, setIsImageEnlarged] = useState(false);
 
   const resumeTitle = "Resume Preview";
-  const pdfPath = "/Programming with JavaScript.pdf";
+  const pdfPath = "/Lalit_Mohan_Agnihotri_Resume.pdf";
 
   return (
     <>
